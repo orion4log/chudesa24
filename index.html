@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чудеса</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" 
+integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+<!-- <link rel="stylesheet" href="styles/preloadnew.css" /> -->
+<link rel="stylesheet" href="styles/madpanel.css" />
+<link rel="stylesheet" href="styles/slpanel.css" />
+<link rel="stylesheet" href="styles/audioplay.css" />
+<link rel="stylesheet" href="chudesa.css" />
+    <link rel="icon" type="Images/x-icon" href="atsicon.ico"/>    
+</head>
+<body>
+<!-- <div class="preloader">
+    <div class="prob">
+        <p>Ожидание — это мост между желаниями и реальностью</p>
+        <img src="styles/preloader4.gif" alt="Нет gifки" width="50" height="80" />
+    </div>
+</div> -->
+<!-- <div id="particles-js"></div> -->
+<div id="bg-21"></div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" 
+aria-hidden="true" style="opacity: .4; padding-top: 2rem;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn btn-success bg-transparent" data-bs-dismiss="modal" style="color: red;">Закрыть</button>
+        <h5 class="modal-title" id="exampleModalLabel" style="color: blue;">
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspАудиоплеер</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+<div class="player" id="player">
+    <div class="details">
+        <div class="now-playing">Слушаем x из y</div>
+        <div class="track-art"></div>
+        <div class="track-name">Название</div>
+        <div class="track-artist">Исполнитель</div>
+    </div>
+    <div class="buttons">
+        <div class="prev-track" onclick="prevTrack()"><i class="fa fa-step-backward fa-2x"></i></div>
+        <div class="playpause-track" onclick="playpauseTrack()"><i class="fa fa-play-circle fa-5x"></i></div>
+        <div class="next-track" onclick="nextTrack()"><i class="fa fa-step-forward fa-2x"></i></div>
+    </div>
+    <div class="slider_container">
+        <div class="current-time">00:00</div>
+        <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+        <div class="total-duration">00:00</div>
+    </div>
+    <div class="slider_container">
+        <i class="fa fa-volume-down"></i>
+        <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+        <i class="fa fa-volume-up"></i>
+    </div>
+</div>
+        
+      </div>       
+  </div>
+</div>
+</div>
+
+<div class="container-fluid text-center">
+<div class="row">
+<div class="col-1">
+<br>
+<button type="button" class="btn btn-light bg-transparent" data-bs-toggle="modal" 
+data-bs-target="#exampleModal">Плеер</button>
+
+<button class="btn btn-light bg-transparent">
+    <a href="puertopr/puertopr.html" target="_blank" title="Видео">Видео</a>
+</button>
+
+<button class="btn btn-light bg-transparent">
+    <a href="komodo/komodo.html" target="_blank" title="Комодо">Комодо</a>
+</button>
+
+<button class="btn btn-light bg-transparent" id="makefon">&nbsp;Фон для чтения&nbsp;</button>
+
+</div>  
+<div class="col-5">      
+
+<div class="obektmus svet">
+<span style="font-weight: bold;">Чудеса света</span>
+<p>
+На протяжении веков люди составляли самые различные списки чудес света, чтобы выделить из общего числа наиболее выдающиеся 
+творения природного совершенства. Чаще всего такие списки ограничивались семью лауреатами вслед за древними семью чудесами 
+света, но также встречаются и более расширенные или узкие перечни.
+</p>
+<div id="myNav3" class="overlaypr"><a href="javascript:void(0)" class="closebtn" onclick="closeNav3()">&times;</a>
+<div class="overlaypr-content">
+
+<p class="pstob1">
+Возможно, первый подобный список составил Геродот ещё в V&nbsp;веке до&nbsp;н.&nbsp;э. В своих трудах «отец истории» перечисляет три чуда 
+острова Самос, который в античные времена являлся центром ионийской культуры:<br>
+1. Акведук в виде тоннеля (километровый водопровод снабжал город чистой водой);<br>
+2. Дамба в порту на острове (была предназначена для защиты побережий, не сохранилась);<br>
+3. Храм богини Геры.
+</p><p class="pstob2">
+Примерно в III веке до н. э. сформировался классический список из семи чудес света:<br>
+1. Пирамида Хеопса (Гиза, 2550 г. до н. э.)<br>
+2. Висячие сады Семирамиды (Вавилон, 600 г. до н. э.)<br>
+3. Статуя Зевса в Олимпии (Олимпия, 435 г. до н. э.)<br>
+4. Храм Артемиды Эфесской (Эфес, 550 г. до н. э.)<br>
+5. Мавзолей в Галикарнасе (Галикарнас, 351 г. до н. э.)<br>
+6. Колосс Родосский (Родос, между 292 и 280 гг. до н. э.)<br>
+7. Александрийский маяк (Александрия, III век до н. э.)
+</p><p class="pstob3">
+В 2001&nbsp;году стартовал проект некоммерческой организации New Open World Corporation, который был призван выявить 
+современные семь чудес Света.
+При этом, было решено определять отдельно архитектурные и природные чудеса. 
+</p>
+
+</div>
+</div>
+<span style="font-size:18px;cursor:pointer;" 
+onclick="openNav3()">История&nbsp;<i class="fa-solid fa-book-open" style='color: #8fe579;'>‌</i></span>&nbsp;
+<div id="myNavsl3" class="overlayslvn"><a href="javascript:void(0)" class="closebtn" onclick="closeNavsl3()"> &times; </a>
+<div class="overlayslvn-content">
+<!-- <div class="kartin"></div> -->
+
+<div class="vspliv13">
+<div class="row">
+<div class="col-6" style="background-color: #c7edb7; color: #000; text-align: left;">
+Рукотворные (архитектурные) чудеса света <br>
+(определились 7 июля 2007 года).<br>
+1. Колизей (Европа,	Италия, Рим)<br>
+2. Великая китайская стена (Азия, Китай)<br>
+3. Мачу-Пикчу (Южная Америка, Перу)<br>
+4. Петра (Азия,	Иордания)<br>
+5. Тадж-Махал (Азия, Индия, Агра)<br>
+6. Статуя Христа-Искупителя	(Южная Америка,	Бразилия, Рио-де-Жанейро)<br>
+7. Чичен-Ица (Северная Америка,	Мексика, Юкатан)<br>
+</div>
+<div class="col-6" style="background-color: #c7edd7; color: #000; text-align: left;">
+Чудеса природного мира <br>
+(определились в 2011 году).<br>
+1. Амазонка и амазонские джунгли (Боливия, Бразилия, Венесуэла, Гайана, Колумбия, Перу, Суринам, Гвиана, Эквадор)<br>
+2. Бухта Халонг	(Вьетнам)<br>
+3. Игуасу (Водопады, Аргентина, Бразилия)<br>
+4. Остров Чеджу	(Республика Корея)<br>
+5. Комодо (Национальный парк, Индонезия)<br>
+6. Подземная река Пуэрто-Принсеса (Карстовые пещеры, Филиппины)<br>
+7. Национальный парк Столовая гора (ЮАР)<br>
+</div></div></div>
+
+<div class="kartin">
+    <a target="_blank" href="img/chudesa01.jpg"><img src="img/chudesa01.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="img/chudesa02.jpg"><img src="img/chudesa02.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="img/chudesa03.jpg"><img src="img/chudesa03.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="img/chudesa04.jpg"><img src="img/chudesa04.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="img/chudesa05.jpg"><img src="img/chudesa05.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="img/chudesa06.jpg"><img src="img/chudesa06.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="img/chudesa07.jpg"><img src="img/chudesa07.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="img/chudesa08.jpg"><img src="img/chudesa08.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="img/chudesa09.jpg"><img src="img/chudesa09.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="img/chudesa10.jpg"><img src="img/chudesa10.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="img/chudesa11.jpg"><img src="img/chudesa11.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="img/chudesa12.jpg"><img src="img/chudesa12.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="img/chudesa13.jpg"><img src="img/chudesa13.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="img/chudesa14.jpg"><img src="img/chudesa14.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="img/chudesa15.jpg"><img src="img/chudesa15.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="img/chudesa16.jpg"><img src="img/chudesa16.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="img/chudesa17.jpg"><img src="img/chudesa17.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="img/chudesa18.jpg"><img src="img/chudesa18.jpg" alt="Нет фото"></a>
+</div>
+    
+</div>
+</div>
+<span style="font-size:18px;cursor:pointer"
+onclick="openNavsl3()">Современность&nbsp;<i class="fa-solid fa-book-open-reader" style='color: #e8a468;'>‌</i></span>&nbsp;
+<button class="btn2 bg-transparent" onClick="window.open('https://travel.yandex.ru/journal/sem-chudes-sveta');">
+    <span class="icon">Чудеса 1</span>&nbsp;
+</button>
+<button class="btn2 bg-transparent" onClick="window.open('https://yandex.ru/pogoda/ru/blog/7chudes-sveta');">
+    <span class="icon">Чудеса 2</span>
+</button>
+
+</div>    
+
+</div>
+<!-- ------------------------------------------------2   -->
+<div class="col-6">      
+<div class="obekt svet"><span style="font-weight: bold;">Национальный парк подземной реки Пуэрто-Принсеса<br></span>
+<!-- В районе реки создан Национальный парк подземной реки Пуэрто-Принсеса — заповедник, расположенный в 50 км от города.  -->
+Парк находится в районе горного хребта Сент-Пол в северной части острова. Он ограничен бухтой Сент-Пол и рекой Бабуян. 
+<!-- Администрация города осуществляет надзор за парком.  -->
+Прежде он также национальным парком подземной реки Святого Павла. 
+Вход в парк находится со стороны города Сабанг.
+Парк расположен в зоне развития карста. Данная река протекает под землёй, в пещере, в направлении Южно-Китайского моря. 
+В пещере образовано множество сталактитов и сталагмитов. 
+<!-- Известна подобная река на полуострове Юкатан в Мексике, но эта признана крупнейшей. -->
+
+<br>
+<div id="myNav2" class="overlay"><a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>
+<div class="overlay-content">
+
+<p class="pstob1">
+<!-- <img class="pribliz" width="500px" src="styles/rimimper.jpg" alt="Нет фото" 
+style="float: left; margin-right: 10px; shape-margin: 20px;"/> -->
+Флора на территории парка разнообразна, лесная растительность парка относятся к 13&nbsp;различным типам, характерным для 
+тропической Азии. Отдельные участки покрыты горными лесами, вечнозелёными лесами равнин, галерейными (растущими по 
+берегам рек и ручьёв) и береговыми лесами, мангровыми зарослями. Часть лесов произрастают на известняковых почвах, 
+часть — на заболоченных. Исследователями открыто 800&nbsp;видов растений, относящихся к 300&nbsp;родам и 100&nbsp;семействам.
+</p><p class="pstob2" style="background-color: #c7edd7; display: flex; flex-wrap: wrap;">
+Из 252&nbsp;видов птиц, встречающихся в целом на Палаване, 165&nbsp;видов представлено в этом парке. Здесь встречаются все 
+из 15&nbsp;эндемичных видов птиц Палавана. 
+В настоящее время в специальной литературе описано 30&nbsp;видов местных млекопитающих.
+Очень часто здесь под покровом леса и на морском побережье встречается макак-крабоед, единственный представитель приматов.
+Идентифицировано 19&nbsp;видов рептилий, из них 8&nbsp;видов — эндемики&sup1;. 
+Это — змеи, а также вараны и другие ящерицы. Земноводные представлены 10-ю&nbsp;видами. 
+Из представителей подводного мира можно назвать дюгоня и зелёную морскую черепаху.
+</p><p style="color: rgb(50, 17, 118); font-style: italic;">
+&sup1;Эндемики — это виды организмов, которые встречаются исключительно в определённой географической области и не имеют естественных популяций в других местах. 
+Слово происходит от греческого эндемос — «местный».    
+</p>
+</div>
+</div>
+
+<span style="font-size:18px;cursor:pointer;" 
+    onclick="openNav2()">Описание 1&nbsp;<i class='fa-solid fa-bullseye' style='color: #c00d1f;'></i></span>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<div id="myNavsl2" class="overlayslvn"><a href="javascript:void(0)" class="closebtn" onclick="closeNavsl2()"> &times; </a>
+<div class="overlayslvn-content">
+<p class="vspliv12" style="color: #000;">
+Как это не удивительно, но ещё недавно подземная река была не очень известным и малопосещаемым туристическим местом. 
+В 2010&nbsp;году группа экологов и геологов обнаружила, что подземная река имеет второй этаж. Это означает, что есть небольшие водопады 
+внутри пещеры. Они также нашли купол пещеры, находящийся на высоте 300 метров над подземной рекой, горные формирования, 
+больших летучих мышей, глубоководное отверстие в реке, большое количество речных каналов, другую глубокую пещеру и многое другое.
+Также на реке была обнаружена очень глубокая впадина, которую до сих пор не удалось исследовать, и её глубина неизвестна. 
+До её дна просто не могут опуститься аквалангисты из-за нехватки кислорода.
+Подземная река имеет длину более 24&nbsp;километров.
+Река впадает в Западно-Филиппинское море прямо из пещеры на берегу рядом с деревней Сабанг на территории нацпарка, и именно это 
+место является главных входом для туристического посещения.
+Отсюда протяженность доступных для лодок ходов составляет 4,3&nbsp;километра.
+Туристические лодки ограничиваются только первым километром.
+В национальном парке Подземная река Пуэрто-Принсеса есть несколько лесных формаций, представляющих восемь из тринадцати типов 
+лесов в тропической части Азии.
+</p>
+<div class="kartin">
+    <a target="_blank" href="puertopr/puertopr01.jpg"><img src="puertopr/puertopr01.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="puertopr/puertopr02.jpg"><img src="puertopr/puertopr02.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="puertopr/puertopr03.jpg"><img src="puertopr/puertopr03.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="puertopr/puertopr04.jpg"><img src="puertopr/puertopr04.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="puertopr/puertopr05.jpg"><img src="puertopr/puertopr05.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="puertopr/puertopr06.jpg"><img src="puertopr/puertopr06.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="puertopr/puertopr07.jpg"><img src="puertopr/puertopr07.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="puertopr/puertopr08.jpg"><img src="puertopr/puertopr08.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="puertopr/puertopr09.jpg"><img src="puertopr/puertopr09.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="puertopr/puertopr10.jpg"><img src="puertopr/puertopr10.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="puertopr/puertopr11.jpg"><img src="puertopr/puertopr11.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="puertopr/puertopr12.jpg"><img src="puertopr/puertopr12.jpg" alt="Нет фото"></a>
+    <a target="_blank" href="puertopr/puertopr13.jpg"><img src="puertopr/puertopr13.jpg" alt="Нет фото"></a>
+</div>
+
+</div>
+</div>
+<span style="font-size:18px;cursor:pointer" onclick="openNavsl2()">Описание 2&nbsp;<i class='fa-solid fa-bahai' style='color: #6c3e95;'></i></span>
+    
+</div>
+</div></div></div>
+
+<div class="container-fluid text-center">
+<div class="row">
+<div class="col-6">
+<!-- ------------------------------------------------3   -->
+<div class="obektvn svet"><span style="font-weight: bold;">Чичен-Ица<br></span>
+Чиче́н-Ица́ — политический и культурный центр майя 
+на севере полуострова Юкатан в Мексике, священный город народа Ица. Расположен в 120&nbsp;км к востоку от города Мерида.
+Основан, вероятно, около 455&nbsp;года. Город может быть условно разделён на две группы. В первую включены строения, 
+датируемые VI—VII&nbsp;вв.&nbsp;н.&nbsp;э. и относящиеся к периоду культуры майя. Вторая группа зданий относится к 
+периоду тольтеков X—XI&nbsp;вв.&nbsp;н.&nbsp;э.
+В X&nbsp;веке был захвачен тольтеками. В середине XI&nbsp;века Чичен-Ица стала столицей тольтекского государства.
+Ко времени испанских завоеваний (середина XVI&nbsp;века) Чичен-Ица представляла собой развалины.
+После 1194&nbsp;года город окончательно опустел.<br>
+
+<a target="_blank" href="puertopr/chicheits1.jpg"><img src="puertopr/chicheits1.jpg" alt="Нет фото"></a>
+<a target="_blank" href="puertopr/chicheits2.jpg"><img src="puertopr/chicheits2.jpg" alt="Нет фото"></a>
+<a target="_blank" href="puertopr/chicheits3.jpg"><img src="puertopr/chicheits3.jpg" alt="Нет фото"></a>
+<a target="_blank" href="puertopr/chicheits4.jpg"><img src="puertopr/chicheits4.jpg" alt="Нет фото"></a>
+<a target="_blank" href="puertopr/chicheits5.jpg"><img src="puertopr/chicheits5.jpg" alt="Нет фото"></a>
+<a target="_blank" href="puertopr/chicheits6.jpg"><img src="puertopr/chicheits6.jpg" alt="Нет фото"></a>
+
+<div id="myNav4" class="overlaypr"><a href="javascript:void(0)" class="closebtn" onclick="closeNav4()">&times;</a>
+<div class="overlaypr-content">
+
+<p class="pstob1">
+
+Политика испанских завоевателей, вторгшихся на территорию Мексики, включала в себя сожжение манускриптов и убийство 
+священнослужителей народа майя. Археологами было выяснено, что в XIII&nbsp;веке Чичен-Ица подвергалась нападению и 
+была разграблена, в то же время экономическое влияние города на соседние регионы стало слабеть, что, вероятно, 
+привело к исходу городской элиты и опустению Чичен-Ицы. 
+</p><p class="pstob2" style="background-color: #bdd9e8; display: flex; flex-wrap: wrap;">    
+На территории Чичен-Ицы неоднократно производились археологические раскопки, в результате которых были открыты архитектурные памятники майя-тольтеков:
+<!-- <img width="380px" height="385px" src="puertopr/chicheits.jpg" alt="Нет фото" style="float: left; margin-right: 10px; shape-margin: 20px;"/>     -->
+«Храм Кукулькана» — 9-ступенчатая пирамида высотой 24&nbsp;метра с широкими лестницами на каждой из сторон;
+«Храм воинов» на 4-ступенчатой пирамиде;
+«Храм ягуаров» (оба с настенными росписями);
+«Караколь» — обсерватория;
+7&nbsp;«стадионов» для игры в мяч, из которых «Уэго де Пелота» (дословно, «Большое поле для игры в мяч») — самая 
+большая игровая площадка из всех созданных майя, длина поля составляет 135&nbsp;м;
+«Группа тысячи колонн» — руины 4&nbsp;колоннад, образующие прямоугольник;
+Священный сенот — природный колодец глубиной около 50&nbsp;м, который служил для жертвоприношений;
+«жилой комплекс».
+Также сохранились статуи божеств с характерной стилизацией пластических форм, рельефы, богатые растительной и геометрической 
+орнаментикой, произведения мелкой пластики и художественных ремёсел.
+</p>
+
+</div>
+</div>
+<span style="font-size:18px;cursor:pointer;" 
+    onclick="openNav4()">Описание 1&nbsp;<i class="fa-solid fa-bug" style='color: #7ac0eb;'>‌</i></span>&nbsp;
+<div id="myNavsl4" class="overlaysl">
+<a href="javascript:void(0)" class="closebtn" onclick="closeNavsl4()"> &times; </a>
+<div class="overlaysl-content">
+
+<!-- <div class="kartin"></div> -->
+<p class="vspliv12" style="color: #000;">
+На языках майя Чичен-Ица означает «В устье колодца Ица» или «Рот колодца колдунов воды». Чи может означать «рот» или «край», 
+а чен — «скважина/источник». Ица являются этносом, в своё время добившимся политического и экономического превосходства в регионе, 
+расположенном вокруг города. Название Ица, вероятно, означает «чародей воды», а точнее, если разложить его на составляющие, 
+иц — «колдун», и xa — «вода».
+    Чичен-Ица в период своего расцвета оставалась мощной экономической державой, чьё влияние распространялось на 
+северные земли майя, в частности жители города могли добывать труднодоступные ресурсы, такие, как обсидиан из центральной 
+части Мексики и золото из западно-центральной Америки. Между 900 и 1050&nbsp;годами н.&nbsp;э., Чичен-Ица стала экономической 
+державой и торговым оазисом, контролирующим экономику северного и центрального Юкатана.
+Чичен-Ица признан ЮНЕСКО объектом мирового культурного наследия и является вторым по популярности среди туристов местом археологических раскопок в Мексике.
+</p>
+</div>
+
+</div>
+<span style="font-size:18px;cursor:pointer" onclick="openNavsl4()">Описание 2&nbsp;<i class="fa-solid fa-baby" style="color: #d1ec67;">‌</i></span>
+</div>
+</div>  
+<div class="col-6">
+<!-- ------------------------------------------------4   -->            
+<div class="obektvn2 svet"><span style="font-weight: bold;">Национальный парк Столовой горы<br></span>
+Национальный парк Столовой горы, ранее известный как Национальный парк Кейп-Пенинсула, — это национальный парк в 
+Кейптауне, ЮАР, основанный 29&nbsp;мая&nbsp;1998 года с целью защиты природной среды Столовой горы и редкой 
+финбосовой растительности. На языке африкаанс слово «финбос» означает «мелкий кустарник» или «мелколесье».
+Парк находится под управлением Южноафриканских национальных парков (SANParks) и входит в состав Кейп-Флорал-Ридж объекта Всемирного наследия ЮНЕСКО.
+В парке находятся две известные достопримечательности: Столовая гора и Мыс Доброй Надежды, 
+самая юго-западная оконечность Африки.
+<br>
+<div id="myNav5" class="overlay"><a href="javascript:void(0)" class="closebtn" onclick="closeNav5()">&times;</a>
+<div class="overlay-content">
+
+<p class="pstob1">
+Аргументы в пользу создания национального парка на полуострове Кейп с центром на Столовой горе начали активно звучать в 
+середине 1930-х&nbsp;годов. В 1952&nbsp;году был создан Совет по сохранению Столовой горы, а в 1957&nbsp;году его рекомендация была принята 
+Национальным советом по памятникам, и Столовая гора была объявлена национальным памятником.
+В середине 1960-х Городской совет Кейптауна объявил заповедниками Столовую гору, Львиную голову, Сигнальный холм и Сильвермайн. 
+После высокого уровня пожаров в 1970-х&nbsp;годах Дуглас Хей был назначен для оценки экологического состояния Столовой горы и 
+южного полуострова, и он рекомендовал (в 1978&nbsp;г.) сохранить все горы полуострова высотой более 152&nbsp;метров.
+</p><p class="pstob2">
+Парк простирается примерно с севера на юг вдоль горного хребта, образующего горную цепь Кейп-Пенинсула, от Сигнал-Хилл на 
+севере через Лайонс-Хед, Столовую гору, Константиаберг, Сильвермайн, горы южной части Пенинсула до Кейп-Пойнт.
+Парк не представляет собой единую территорию. Неосвоенные горные районы, составляющие большую часть парка, отделены от 
+освоенных городских территорий, расположенных на более равнинной местности. 
+Столовая гора - самая привлекательная и фотографируемая достопримечательность страны. Её плоская вершина достигает 1086&nbsp;м над уровнем моря. 
+Путь к её вершине никогда не был легким и в течение многих веков только горстка смелых и решительных людей могли сказать, что покорили её.
+</p>
+</div>
+</div>
+
+<button class="btn2 bg-transparent">
+    <a href="stolgora/stolgora.html" target="_blank" title="Фото (автопрокрутка)">Фотографии</a>
+</button>&nbsp;&nbsp;&nbsp;&nbsp;
+
+<span style="font-size:18px;cursor:pointer;" 
+    onclick="openNav5()">Описание 1&nbsp;<i class='fa-solid fa-burger' style='color: #d7e53b;'></i></span>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<div id="myNavsl5" class="overlaysl">
+<a href="javascript:void(0)" class="closebtn" onclick="closeNavsl5()"> &times; </a>
+<div class="overlaysl-content">
+
+<!-- <div class="kartin"></div> -->
+<p class="vspliv12" style="color: #000;">
+<span style="font-weight: bold; color: #181f86;">Парк разделён на три отдельных участка.</span>
+<span style="font-weight: bold;">Секция Столовой горы.</span>
+Здесь находятся Сигнал-Хилл, Львиная Голова, собственно Столовая Гора, включая Бэк-Тейбл 
+(заднюю, нижнюю часть горы), Пик Дьявола, Двенадцать Апостолов (на самом деле это группа из семнадцати 
+вершин вдоль Атлантического побережья) и Оранж-Клуфе (особо охраняемая территория, закрытая для посещения).
+<span style="font-weight: bold;">Участок Сильвермайн-Токай.</span>
+Этот участок простирается с северо-запада на юго-восток через полуостров от Атлантического побережья до побережья Ложной бухты. 
+Он охватывает Константиаберг, пик Стенберг и горы Калк-Бей. На северо-западе он граничит с Хаут-Бей, на северо-востоке — с пригородами 
+Констанции и Токаи, на юго-востоке — с Калк-Бей, а на юго-западе — с Фиш-Хук и Нордхук.
+Этот участок был образован на территории государственного леса Токай и природного заповедника Сильвермайн.
+<span style="font-weight: bold;">Секция Кейп - Пойнт.</span>
+Этот раздел охватывает самую южную часть полуострова Кейп, простирающуюся от Кейп-Пойнта и мыса Доброй Надежды на юге до 
+Скарборо на атлантическом побережье и Саймонс-Тауна на побережье Фолс-Бей. Он был создан на базе природного заповедника «Мыс Доброй Надежды».
+</p>
+</div>
+</div>
+<span style="font-size:18px;cursor:pointer"
+onclick="openNavsl5()">Описание 2&nbsp;<i class='fa-solid fa-building-columns' style='color: #8b3a49;'></i></span>
+</div>
+</div></div></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="styles/three.min.js"></script>
+<script src="styles/bg-21.js"></script>
+<script src="styles/vklvikl.js"></script>
+<script src="styles/particles.min.js"></script>
+<script src="styles/app.js"></script>
+<!-- <script src="styles/preloadnew.js"></script> -->
+<script src="styles/madpanel.js"></script>    
+<script src="styles/slpanel.js"></script>    
+<script src="styles/audioplay.js"></script>    
+</body>
+</html>

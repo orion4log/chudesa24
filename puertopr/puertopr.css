@@ -1,0 +1,55 @@
+* { margin: 0; padding: 0; 
+box-sizing: border-box;
+}
+body { min-height: 100vh; }
+#particles-js{ 
+height:100vh; 
+position: absolute; 
+z-index: -3;
+background-color: rgb(190, 235, 183);
+}    
+#zapoln{
+position: absolute;
+padding: 5px 30px 5px 5px;
+font-size: 20px;
+}
+
+.container-fluid{ display: block;
+padding-top: .3rem;
+}
+.container-fluid .main-video{ 
+display: none;
+}
+.container-fluid .main-video video{
+width: 100%;
+}    
+.container-fluid .video-list .vid video{
+width: 120px;
+}
+.container-fluid .video-list .vid:hover{
+color: #eee; cursor: pointer;
+}
+.container-fluid .video-list .vid:active{
+color: #2980b9;
+}   
+
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 50px;
+}
+img:hover { box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);}
+
+*{
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+.hide{display: none;}
+/* .tsifra{ position: absolute; 
+font-size: 2rem; color: red; } */
+

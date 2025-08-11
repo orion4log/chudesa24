@@ -1,0 +1,69 @@
+.overlaysl {
+    height: 39%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1a6e1a;
+    overflow-x: hidden;
+    transition: .1s;
+}
+.overlaysl-content {
+    position: relative;
+    top: 1%;
+    width: 100%;
+    text-align: center;
+}
+.overlaysl a {
+    padding: 5px;
+    text-decoration: none;
+    font-size: 40px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+.overlaysl a:hover,
+.overlaysl a:focus {
+    color: black;
+}
+.overlaysl .closebtn { z-index: 3;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    font-size: 45px;
+}
+
+.overlayslvn {
+    height: 61%;
+    width: 0;
+    position: fixed;
+    top: 39%;
+    left: 0;
+    background-color: #1a6e1a;
+    overflow-x: hidden;
+    transition: .3s;
+}
+.overlayslvn-content {
+    position: relative;
+    top: 1%;
+    width: 100%;
+    text-align: center;
+}
+.overlayslvn a {
+    padding: 5px;
+    text-decoration: none;
+    font-size: 40px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+.overlayslvn a:hover,
+.overlayslvn a:focus {
+    color: black;
+}
+.overlayslvn .closebtn { z-index: 3;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    font-size: 45px;
+}
