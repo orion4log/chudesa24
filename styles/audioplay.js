@@ -20,6 +20,12 @@ let curr_track = document.createElement('audio');
 
 let track_list = [
   {
+    name: "Шумите берёзы",
+    artist: "",
+    image: "music/pic01.jpg",
+    path: "music/shumberezi.mp3"
+  },
+  {
     name: "Не надо печалиться",
     artist: "",
     image: "music/pic01.jpg",
