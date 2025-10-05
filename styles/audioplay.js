@@ -28,25 +28,31 @@ let track_list = [
   {
     name: "Не надо печалиться",
     artist: "",
-    image: "music/pic01.jpg",
+    image: "music/pic02.jpg",
     path: "music/sampechal.mp3"
+  },
+  {
+    name: "Белеет мой парус",
+    artist: "",
+    image: "music/pic03.jpg",
+    path: "music/beleetparus.mp3"
   },
   {
     name: "Милая моя",
     artist: "",
-    image: "music/pic02.jpg",
+    image: "music/pic04.jpg",
     path: "music/milayamoya.mp3"
   },
   {
     name: "Комарово",
     artist: "",
-    image: "music/pic03.jpg",
+    image: "music/pic05.jpg",
     path: "music/komarovo.mp3",
   },
   {
     name: "Надежда",
     artist: "",
-    image: "music/pic04.jpg",
+    image: "music/pic06.jpg",
     path: "music/nadezda.mp3",
   },
 ];
