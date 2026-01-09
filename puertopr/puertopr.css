@@ -50,6 +50,11 @@ user-select: none;
 }
 
 .hide{display: none;}
+.ssilk{color: rgb(14, 9, 95);
+font-size: 14px;
+width: 130px;
+}
+.ssilk:hover{color: #023009;}
 /* .tsifra{ position: absolute; 
 font-size: 2rem; color: red; } */
 
