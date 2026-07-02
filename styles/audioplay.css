@@ -1,8 +1,18 @@
+.perknopa{
+  background-color: black;
+  color: white;
+  padding: 3px;
+  font-size: 16px;
+  border: 2px dashed greenyellow;
+  border-radius: 1rem;
+}
+.perknopa:hover{color: greenyellow;}
+
 .player {
   background-color: lightgreen;
   /* Smoothly transition the background color */
   transition: background-color .5s;
-  height: 35vh;
+  height: 40vh;
   display: flex;
   align-items: center;
   flex-direction: column;

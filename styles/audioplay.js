@@ -21,7 +21,8 @@ let curr_track = document.createElement('audio');
 let track_list = [
   {
     name: "Шумите берёзы",
-    artist: "",
+    artist: `<a href="styles/sabriber.html" target="_blank" title="Перевод песни «Шумите берёзы»">
+    <button class="perknopa">Перевод</button></a>`,
     image: "music/pic01.jpg",
     path: "music/shumberezi.mp3"
   },
@@ -81,7 +82,7 @@ function loadTrack(track_index) {
 
   track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
   track_name.textContent = track_list[track_index].name;
-  track_artist.textContent = track_list[track_index].artist;
+  track_artist.innerHTML = track_list[track_index].artist;
   now_playing.textContent = "Песня " + (track_index + 1) + " из " + track_list.length;
 
   updateTimer = setInterval(seekUpdate, 1000);
